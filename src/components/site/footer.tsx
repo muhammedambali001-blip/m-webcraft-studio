@@ -18,10 +18,11 @@ export function Footer() {
           <div>
             <span className="inline-block rounded-xl bg-white p-2.5 shadow-sm">
               <Image
-                src="/m-webcraft-studio-logo.png"
+                src="/m-webcraft-studio-logo.webp"
                 alt="M-WebCraft Studio logo"
-                width={1254}
-                height={1254}
+                width={192}
+                height={192}
+                sizes="56px"
                 className="h-14 w-14 object-contain"
               />
             </span>

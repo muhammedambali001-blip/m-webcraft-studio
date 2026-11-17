@@ -62,3 +62,8 @@ server.log
 /.zscripts/
 /Caddyfile
 /agent-ctx
+
+# local measurement builds (not part of the app)
+/.next-baseline/
+/.next-measure/
+/tool-results/

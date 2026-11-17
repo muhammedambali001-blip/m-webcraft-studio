@@ -17,7 +17,7 @@ export function About() {
           />
           <figure className="relative aspect-square overflow-hidden rounded-3xl border-[6px] border-white shadow-[0_24px_60px_-28px_rgba(53,37,29,0.5)]">
             <Image
-              src="/muhammed-ambali-about.jpg"
+              src="/muhammed-ambali-about.webp"
               alt="Muhammed Ambali, Website Designer and AI Developer, in his studio portrait wearing a dark brown three-piece suit"
               fill
               sizes="(min-width: 1024px) 36vw, 92vw"

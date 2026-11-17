@@ -3,12 +3,12 @@ import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
-/* Elegant serif for headlines */
+/* Elegant serif for headlines. Variable font: one file covers every weight
+   (normal + italic) instead of a woff2 per weight/style combo. */
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -71,6 +71,14 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${playfair.variable} ${manrope.variable} antialiased bg-background text-foreground font-sans`}
       >
+        {/* Runs before first paint: marks that JS is available, so the CSS
+            scroll-reveal styles may hide not-yet-revealed sections. Without
+            JavaScript the class is never added and all content stays visible. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         {children}
         <Toaster position="top-center" richColors closeButton />
       </body>

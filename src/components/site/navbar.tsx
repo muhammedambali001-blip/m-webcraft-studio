@@ -23,11 +23,12 @@ function LogoChip({ className }: { className?: string }) {
       )}
     >
       <Image
-        src="/m-webcraft-studio-logo.png"
+        src="/m-webcraft-studio-logo.webp"
         alt="M-WebCraft Studio logo"
-        width={1254}
-        height={1254}
+        width={192}
+        height={192}
         priority
+        sizes="36px"
         className="h-9 w-9 object-contain"
       />
       <span className="hidden min-[420px]:block font-serif text-lg font-semibold leading-none text-forest">
