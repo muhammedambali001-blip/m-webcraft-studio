@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/* M-WebCraft Studio brand palette                                     */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-forest: #073b2b; /* primary brand green        */
+  --color-forest-deep: #042a1e; /* darker green for footer    */
+  --color-forest-soft: #0c4a36; /* hover state green          */
+  --color-gold: #c49337; /* antique gold accent        */
+  --color-gold-deep: #a97f2b; /* gold hover state           */
+  --color-gold-light: #e9cf9b; /* pale gold for dark bg text */
+  --color-ivory: #f7f4ed; /* warm ivory page background */
+  --color-ivory-dark: #efe9db; /* deeper ivory for panels    */
+  --color-espresso: #35251d; /* espresso brown (portrait)  */
+  --color-espresso-deep: #221610;
+  --color-charcoal: #252b30; /* body text                  */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #f7f4ed;
+  --foreground: #252b30;
+  --card: #ffffff;
+  --card-foreground: #252b30;
+  --popover: #ffffff;
+  --popover-foreground: #252b30;
+  --primary: #073b2b;
+  --primary-foreground: #f7f4ed;
+  --secondary: #efe9db;
+  --secondary-foreground: #073b2b;
+  --muted: #efe9db;
+  --muted-foreground: #5d656c;
+  --accent: #eae3d2;
+  --accent-foreground: #073b2b;
+  --destructive: #b3372e;
+  --border: #e4dccb;
+  --input: #ddd4c1;
+  --ring: #c49337;
+  --chart-1: #073b2b;
+  --chart-2: #c49337;
+  --chart-3: #35251d;
+  --chart-4: #0c4a36;
+  --chart-5: #a97f2b;
+  --sidebar: #f7f4ed;
+  --sidebar-foreground: #252b30;
+  --sidebar-primary: #073b2b;
+  --sidebar-primary-foreground: #f7f4ed;
+  --sidebar-accent: #eae3d2;
+  --sidebar-accent-foreground: #073b2b;
+  --sidebar-border: #e4dccb;
+  --sidebar-ring: #c49337;
+}
+
+.dark {
+  --background: #12211b;
+  --foreground: #f7f4ed;
+  --card: #073b2b;
+  --card-foreground: #f7f4ed;
+  --popover: #073b2b;
+  --popover-foreground: #f7f4ed;
+  --primary: #e9cf9b;
+  --primary-foreground: #042a1e;
+  --secondary: #0c4a36;
+  --secondary-foreground: #f7f4ed;
+  --muted: #0c4a36;
+  --muted-foreground: #b9c2bc;
+  --accent: #0c4a36;
+  --accent-foreground: #f7f4ed;
+  --destructive: #e07a6f;
+  --border: #0c4a36;
+  --input: #0c4a36;
+  --ring: #c49337;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.25rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background-color: rgba(196, 147, 55, 0.3);
+    color: #252b30;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Slim scrollbar for the chat message list */
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d8cfba transparent;
+}
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: #d8cfba;
+  border-radius: 9999px;
+}
+
+/* Soft radial glow used behind the hero portrait (warm bronze) */
+.warm-glow {
+  background: radial-gradient(
+    closest-side,
+    rgba(196, 147, 55, 0.18),
+    rgba(53, 37, 29, 0.05) 70%,
+    transparent
+  );
+}
