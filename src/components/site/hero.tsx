@@ -41,11 +41,12 @@ export function Hero() {
 
           <div className="mt-7 flex items-center gap-4 rounded-2xl border border-espresso/10 bg-white/80 p-4 pr-6 shadow-sm backdrop-blur-sm">
             <Image
-              src="/muhammed-ambali-about.webp"
+              src="/muhammed-ambali-about.jpg"
               alt=""
               aria-hidden="true"
-              width={803}
-              height={794}
+              width={800}
+              height={791}
+              quality={90}
               sizes="48px"
               loading="eager"
               className="size-12 shrink-0 rounded-full border border-gold/40 object-cover object-top"
@@ -88,12 +89,15 @@ export function Hero() {
 
           {/* arch portrait */}
           <figure className="relative aspect-[2/3] w-full overflow-hidden rounded-t-full border-[6px] border-white bg-espresso/10 shadow-[0_24px_60px_-24px_rgba(53,37,29,0.45)]">
+            {/* Served from the original NEW PIC.jpeg; q90 keeps the portrait
+                sharp while the optimizer still produces AVIF/WebP copies. */}
             <Image
-              src="/muhammed-ambali-portrait.webp"
+              src="/muhammed-ambali-portrait.jpg"
               alt="Muhammed Ambali, CEO and Founder of M-WebCraft Studio, wearing a dark brown three-piece suit and glasses, standing confidently with hands in his pockets"
               fill
               priority
-              sizes="(min-width: 1024px) 38vw, (min-width: 640px) 60vw, 92vw"
+              quality={90}
+              sizes="(min-width: 1024px) 460px, (min-width: 640px) 420px, 92vw"
               className="object-cover object-top"
             />
           </figure>

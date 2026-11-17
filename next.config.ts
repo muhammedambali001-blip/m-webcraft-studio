@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   /* Standalone output is only used for self-hosting; Vercel builds the app
      with its own runtime, so we keep the default output here. */
   typescript: {
@@ -15,6 +16,15 @@ const nextConfig: NextConfig = {
     /* Serve AVIF (smallest) then WebP to browsers that support them.
        Next.js compresses text responses (gzip/brotli) automatically. */
     formats: ["image/avif", "image/webp"],
+    /* Photographic quality: q90 keeps the portrait/logo sharp (the default
+       75 visibly softened fine detail). 75 stays allowed for any image that
+       does not request a specific quality. */
+    qualities: [75, 90],
+    /* The source photographs are 854px wide at most — never let the
+       optimizer generate upscaled (blurry) variants above native size. */
+    deviceSizes: [640, 750, 828, 854],
+    /* Optimised variants are stable: let browsers cache them for 31 days. */
+    minimumCacheTTL: 2678400,
   },
   async headers() {
     return [

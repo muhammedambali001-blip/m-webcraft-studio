@@ -180,11 +180,12 @@ export function ChatPanel({ open, onClose, pendingAsk, onAskHandled }: ChatPanel
       <div className="flex items-center gap-3 bg-forest px-4 py-4">
         <span className="flex size-10 items-center justify-center rounded-full bg-white p-1.5">
           <Image
-            src="/m-webcraft-studio-logo.webp"
+            src="/m-webcraft-studio-logo.png"
             alt=""
             aria-hidden="true"
-            width={192}
-            height={192}
+            width={1254}
+            height={1254}
+            quality={90}
             sizes="28px"
             className="size-full object-contain"
           />
