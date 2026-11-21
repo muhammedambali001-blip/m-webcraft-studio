@@ -53,17 +53,28 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
             </li>
           ))}
         </ul>
-        {project.liveUrl ? (
+
+        {/* two actions per project: open the real site, or start an enquiry */}
+        <div className="mt-auto flex flex-col gap-2.5 pt-6">
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-forest px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-ivory transition-colors hover:bg-gold hover:text-espresso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              View Live Website
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+          ) : null}
           <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-forest hover:text-gold-deep"
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-forest/30 bg-transparent px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-forest transition-colors hover:border-forest hover:bg-forest hover:text-ivory focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           >
-            Visit live website
-            <ArrowUpRight className="size-4" aria-hidden="true" />
+            Discuss a Similar Project
+            <MessageSquare className="size-4" aria-hidden="true" />
           </a>
-        ) : null}
+        </div>
       </div>
     </article>
   );

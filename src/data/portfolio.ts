@@ -39,7 +39,38 @@ export interface PortfolioProject {
   liveUrl?: string;
 }
 
-export const portfolioProjects: PortfolioProject[] = [];
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Havenstone Realty",
+    industry: "Real Estate",
+    category: "Website Design",
+    description:
+      "A luxury property website showcasing homes for sale and rent across New York, Los Angeles, Miami, Palm Beach and Aspen — with featured residences, signature markets and viewing enquiries.",
+    screenshot: "/portfolio/havenstone.jpg",
+    services: ["Website Design", "Property Showcase", "Book a Viewing"],
+    liveUrl: "https://havenstone-realty-zeta.vercel.app/",
+  },
+  {
+    title: "BrightNest Home Services",
+    industry: "Home Services",
+    category: "Website Design",
+    description:
+      "A professional cleaning and home-care company website in Manchester, England — residential, deep, office and end-of-tenancy services with a step-by-step enquiry flow and clear FAQs.",
+    screenshot: "/portfolio/brightnest.jpg",
+    services: ["Website Design", "Service Pages", "Enquiry Flow", "FAQs"],
+    liveUrl: "https://brightnest-home-services.vercel.app/",
+  },
+  {
+    title: "Banksia Table",
+    industry: "Hospitality",
+    category: "Website Design",
+    description:
+      "A modern Australian restaurant website for Fitzroy, Melbourne — seasonal contemporary menu, private dining and table booking, presented in a warm, atmospheric design.",
+    screenshot: "/portfolio/banksia.jpg",
+    services: ["Website Design", "Menu Showcase", "Private Dining", "Table Booking"],
+    liveUrl: "https://banksia-table.vercel.app/",
+  },
+];
 
 /** Supporting copy for the portfolio section. */
 export const portfolioIntro =
