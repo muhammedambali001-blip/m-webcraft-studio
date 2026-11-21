@@ -62,7 +62,7 @@ export function Navbar() {
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a
           href="#home"
-          aria-label="M-WebCraft Studio — back to top"
+          aria-label="M-WebCraft Studio, back to top"
           className="rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
           <LogoChip />

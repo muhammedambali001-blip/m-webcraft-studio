@@ -162,7 +162,7 @@ export function Contact() {
 
       toast.success("Your enquiry is ready to send", {
         description:
-          "WhatsApp is opening with your details pre-filled — just review and press send.",
+          "WhatsApp is opening with your details pre-filled. Just review and press send.",
       });
 
       setValues(EMPTY_VALUES);
@@ -191,7 +191,7 @@ export function Contact() {
       return;
     }
     window.location.href = buildMailtoUrl(
-      `Project Enquiry — ${values.service.trim()}`,
+      `Project Enquiry: ${values.service.trim()}`,
       buildEnquiryMessage(values),
     );
   }
@@ -250,7 +250,7 @@ export function Contact() {
                   </p>
                   <p className="mt-1 inline-flex items-center gap-2.5 font-medium text-ivory">
                     <MapPin className="size-4 shrink-0 text-gold-light" aria-hidden="true" />
-                    Nigeria — working remotely with clients worldwide
+                    Nigeria, working remotely with clients worldwide
                   </p>
                 </li>
               </ul>
@@ -266,7 +266,7 @@ export function Contact() {
                   Chat With Me on WhatsApp
                 </a>
                 <a
-                  href={`mailto:${site.email}?subject=${encodeURIComponent("Project Enquiry — M-WebCraft Studio")}`}
+                  href={`mailto:${site.email}?subject=${encodeURIComponent("Project Enquiry: M-WebCraft Studio")}`}
                   className="flex items-center justify-center gap-2.5 rounded-full border border-ivory/35 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-ivory transition-colors hover:border-ivory hover:bg-ivory hover:text-forest"
                 >
                   <Mail className="size-4" aria-hidden="true" />
@@ -284,7 +284,7 @@ export function Contact() {
               </h3>
               <p className="mt-2 text-sm text-charcoal/70">
                 Fill in the form and WhatsApp will open with your enquiry
-                pre-filled — you stay in control of when it&apos;s sent.
+                pre-filled, so you stay in control of when it&apos;s sent.
               </p>
 
               <form
@@ -408,7 +408,7 @@ export function Contact() {
 
                 <p className="text-center text-xs leading-relaxed text-charcoal/55">
                   Submitting opens WhatsApp with your enquiry details
-                  pre-filled — nothing is sent until you press send in
+                  pre-filled. Nothing is sent until you press send in
                   WhatsApp. Enquiries may also be stored in the studio&apos;s
                   enquiry log.
                 </p>

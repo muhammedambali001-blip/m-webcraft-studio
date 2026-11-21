@@ -221,7 +221,7 @@ export const whyPoints: WhyPoint[] = [
   {
     title: "Solutions suited to your business needs",
     detail:
-      "Recommendations based on what your business genuinely needs — nothing more.",
+      "Recommendations based on what your business genuinely needs, and nothing more.",
   },
   {
     title: "Remote collaboration with international businesses",
@@ -287,5 +287,5 @@ export const enquiryServiceOptions = [
   "AI Chatbots",
   "Business Automation",
   "Website Hosting",
-  "Not sure yet — I need advice",
+  "Not sure yet, I need advice",
 ] as const;

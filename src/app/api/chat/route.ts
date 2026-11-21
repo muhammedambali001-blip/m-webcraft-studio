@@ -22,20 +22,21 @@ const SYSTEM_PROMPT = `You are the M-WebCraft Assistant for M-WebCraft Studio, t
 BRAND MESSAGE: Muhammed builds professional websites and AI solutions that help businesses attract customer enquiries, improve their online presence and serve customers more effectively.
 
 SERVICES:
-1. Professional Website Design — modern, responsive websites for businesses and service providers: business websites, service-based websites, landing pages, responsive design, clear calls to action and enquiry forms.
-2. AI Chatbots — website chat assistants that answer common customer questions, collect enquiries and guide visitors towards services.
-3. Business Automation — automating everyday tasks: appointment reminders, booking confirmations, enquiry notifications, customer follow-ups and repetitive workflows.
-4. Website Redesign — improving the design, mobile experience, navigation, page structure, customer journeys and calls to action of existing websites.
-5. Affordable Website Hosting — hosting options WITHOUT monthly hosting fees for eligible websites; the client pays for the domain annually and additional tools may have separate costs. Never describe all hosting as free, and never promise every website qualifies.
+1. Professional Website Design: modern, responsive websites for businesses and service providers. This covers business websites, service-based websites, landing pages, responsive design, clear calls to action and enquiry forms.
+2. AI Chatbots: website chat assistants that answer common customer questions, collect enquiries and guide visitors towards services.
+3. Business Automation: automating everyday tasks like appointment reminders, booking confirmations, enquiry notifications, customer follow-ups and repetitive workflows.
+4. Website Redesign: improving the design, mobile experience, navigation, page structure, customer journeys and calls to action of existing websites.
+5. Affordable Website Hosting: hosting options WITHOUT monthly hosting fees for eligible websites; the client pays for the domain annually and additional tools may have separate costs. Never describe all hosting as free, and never promise every website qualifies.
 
-TARGET CLIENTS: small businesses, startups, entrepreneurs, home service businesses, restaurants, hair salons and beauty businesses, clothing and fashion brands, coaches and consultants, real estate agencies and local businesses — in Nigeria, the United States, the United Kingdom and other international markets.
+TARGET CLIENTS: small businesses, startups, entrepreneurs, home service businesses, restaurants, hair salons and beauty businesses, clothing and fashion brands, coaches and consultants, real estate agencies and local businesses across Nigeria, the United States, the United Kingdom and other international markets.
 
-PROCESS: 1) Discover — learn about the business, services, customers and goals. 2) Plan — identify pages, features and the customer journey. 3) Design & Build — design and develop the solution. 4) Launch & Support — prepare for launch and explain support and hosting arrangements.
+PROCESS: 1) Discover (learn about the business, services, customers and goals). 2) Plan (identify pages, features and the customer journey). 3) Design & Build (design and develop the solution). 4) Launch & Support (prepare for launch and explain support and hosting arrangements).
 
 CONTACT: Email ${site.email} or WhatsApp +234 810 468 0812 (https://wa.me/${site.whatsappNumber}). Enquiries go through the contact section of this website.
 
 RULES:
 - Keep replies warm, professional and SHORT: 2-4 sentences, plain language, no markdown headings, no bullet lists unless truly necessary.
+- Never use em dashes (\u2014) or long dashes in your replies. Use commas, full stops and colons instead, so replies read like natural human writing.
 - You may use simple line breaks for readability.
 - Never invent clients, portfolio projects, testimonials, prices, discounts, delivery dates, awards or statistics. If asked about pricing or timelines, say Muhammed discusses project details personally and invite them to send an enquiry via WhatsApp, email or the contact section.
 - If a visitor seems interested in starting a project, gently guide them to the contact section or WhatsApp.
@@ -59,7 +60,7 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(website design|design a website|new website|build.*website|create.*website|landing page)/i,
-    reply: `Muhammed builds modern, responsive websites that showcase your business, explain your services and make it easy for potential customers to contact you — including business websites, service-based websites and landing pages with clear calls to action and enquiry forms. Would you like to discuss a website for your business?`,
+    reply: `Muhammed builds modern, responsive websites that showcase your business, explain your services and make it easy for potential customers to contact you, including business websites, service-based websites and landing pages with clear calls to action and enquiry forms. Would you like to discuss a website for your business?`,
     links: [
       { label: "Start a project", href: "#contact" },
       { label: "Chat on WhatsApp", href: buildWhatsAppUrl() },
@@ -67,12 +68,12 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(redesign|re-design|existing website|improve.*website|old website)/i,
-    reply: `Yes — Muhammed can redesign an existing website. That covers a modern visual redesign, mobile responsiveness, better page structure, improved navigation, clearer customer journeys and better calls to action. Tell me a little about your current website and what feels wrong with it.`,
+    reply: `Yes, Muhammed can redesign an existing website. That covers a modern visual redesign, mobile responsiveness, better page structure, improved navigation, clearer customer journeys and better calls to action. Tell me a little about your current website and what feels wrong with it.`,
     links: [{ label: "Chat on WhatsApp", href: buildWhatsAppUrl() }],
   },
   {
     keywords: /(chat ?bot|ai assistant|chat assistant)/i,
-    reply: `Muhammed creates AI chatbots for business websites — assistants like me that answer common customer questions, collect enquiries and guide visitors towards your services, day and night. The assistant you're chatting with right now is a live example of how one would work on your website.`,
+    reply: `Muhammed creates AI chatbots for business websites, and I'm one of them. I answer common customer questions, collect enquiries and guide visitors towards your services, day and night. The assistant you're chatting with right now is a live example of how one would work on your website.`,
     links: [
       { label: "Start a project", href: "#contact" },
       { label: "Chat on WhatsApp", href: buildWhatsAppUrl() },
@@ -80,7 +81,7 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(automation|automate|reminder|follow[- ]?up|booking confirmation|notification)/i,
-    reply: `Muhammed helps businesses automate repetitive tasks so they save time and manage customer communication more efficiently — for example appointment reminders, booking confirmations, enquiry notifications and customer follow-ups. What task takes up too much of your time at the moment?`,
+    reply: `Muhammed helps businesses automate repetitive tasks so they save time and manage customer communication more efficiently, for example appointment reminders, booking confirmations, enquiry notifications and customer follow-ups. What task takes up too much of your time at the moment?`,
     links: [{ label: "Chat on WhatsApp", href: buildWhatsAppUrl() }],
   },
   {
@@ -90,7 +91,7 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(price|pricing|cost|how much|budget|charge|fee)/i,
-    reply: `Project pricing depends on what your business needs, so Muhammed discusses it personally rather than publishing fixed prices. The easiest way is to send a WhatsApp message or an email describing your project — he'll get back to you.`,
+    reply: `Project pricing depends on what your business needs, so Muhammed discusses it personally rather than publishing fixed prices. The easiest way is to send a WhatsApp message or an email describing your project. He'll get back to you.`,
     links: [
       { label: "Chat on WhatsApp", href: buildWhatsAppUrl() },
       { label: "Send an email", href: `mailto:${site.email}` },
@@ -98,7 +99,7 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(contact|whatsapp|email|phone|reach|call|talk|speak)/i,
-    reply: `You can reach Muhammed directly on WhatsApp at +234 810 468 0812 or by email at ${site.email}. You can also use the contact form on this page — it opens WhatsApp with your enquiry details pre-filled.`,
+    reply: `You can reach Muhammed directly on WhatsApp at +234 810 468 0812 or by email at ${site.email}. You can also use the contact form on this page, which opens WhatsApp with your enquiry details pre-filled.`,
     links: [
       { label: "Chat on WhatsApp", href: buildWhatsAppUrl() },
       { label: "Go to contact section", href: "#contact" },
@@ -106,7 +107,7 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(start|begin|hire|work with|project|enquiry|quote)/i,
-    reply: `Great — starting is simple. Send a message through the contact section below, or tap the WhatsApp button, and tell Muhammed about your business and the solution you're looking for. He'll reply personally and suggest the right next step.`,
+    reply: `Great, starting is simple. Send a message through the contact section below, or tap the WhatsApp button, and tell Muhammed about your business and the solution you're looking for. He'll reply personally and suggest the right next step.`,
     links: [
       { label: "Start a project", href: "#contact" },
       { label: "Chat on WhatsApp", href: buildWhatsAppUrl() },
@@ -124,12 +125,12 @@ const demoAnswers: DemoAnswer[] = [
   },
   {
     keywords: /(international|us|usa|united states|uk|united kingdom|abroad|remote|nigeria)/i,
-    reply: `Yes — Muhammed is based in Nigeria and works remotely with businesses in the United States, the United Kingdom and other countries, so time zones are never a barrier to a well-run project.`,
+    reply: `Yes, Muhammed is based in Nigeria and works remotely with businesses in the United States, the United Kingdom and other countries, so time zones are never a barrier to a well-run project.`,
     links: [{ label: "Start a project", href: "#contact" }],
   },
 ];
 
-const demoDefaultReply = `I can help with questions about M-WebCraft Studio's services — professional website design, website redesign, AI chatbots, business automation and website hosting. Which one would you like to know more about?`;
+const demoDefaultReply = `I can help with questions about M-WebCraft Studio's services: professional website design, website redesign, AI chatbots, business automation and website hosting. Which one would you like to know more about?`;
 
 function fallbackReply(userText: string): { reply: string; links?: { label: string; href: string }[] } {
   const match = demoAnswers.find((a) => a.keywords.test(userText));
@@ -186,7 +187,7 @@ export async function POST(request: Request) {
       {
         ok: false,
         reply:
-          "Sorry — something went wrong on my side. Please try again, or reach Muhammed directly on WhatsApp.",
+          "Sorry, something went wrong on my side. Please try again, or reach Muhammed directly on WhatsApp.",
         mode: "demo",
         links: [{ label: "Chat on WhatsApp", href: buildWhatsAppUrl() }],
       },

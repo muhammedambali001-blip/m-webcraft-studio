@@ -8,7 +8,7 @@ import { services } from "@/data/content";
 /**
  * Five premium service cards + a CTA card.
  * "Learn more" opens the M-WebCraft Assistant pre-loaded with a question
- * about that service — a live demonstration of the chatbot offering.
+ * about that service, a live demonstration of the chatbot offering.
  */
 export function Services() {
   const askAbout = (question: string) => {
@@ -23,7 +23,7 @@ export function Services() {
         <SectionHeading
           label="My Services"
           title="What I Can Do for Your Business."
-          description="Practical website design, AI and automation services — each one aimed at helping your business attract more customer enquiries."
+          description="Practical website design, AI and automation services, each one aimed at helping your business attract more customer enquiries."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,7 @@ export function Services() {
                   type="button"
                   onClick={() => askAbout(service.askQuestion)}
                   className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-bold text-forest transition-all hover:gap-3 hover:text-gold-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-                  aria-label={`Learn more about ${service.title} — opens the M-WebCraft Assistant`}
+                  aria-label={`Learn more about ${service.title}. Opens the M-WebCraft Assistant`}
                 >
                   Learn more
                   <ArrowRight className="size-4" aria-hidden="true" />

@@ -130,7 +130,7 @@ export function ChatPanel({ open, onClose, pendingAsk, onAskHandled }: ChatPanel
             id: nextId++,
             role: "assistant",
             content:
-              "Sorry — I couldn't reach the server. Please try again, or reach Muhammed directly on WhatsApp.",
+              "Sorry, I couldn't reach the server. Please try again, or reach Muhammed directly on WhatsApp.",
             links: [{ label: "Chat on WhatsApp", href: buildWhatsAppUrl() }],
             demo: true,
           },
@@ -196,7 +196,7 @@ export function ChatPanel({ open, onClose, pendingAsk, onAskHandled }: ChatPanel
           </p>
           <p className="mt-0.5 flex items-center gap-1.5 text-[11px] text-gold-light">
             <span className="size-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
-            Online — replies instantly
+            Online, replies instantly
           </p>
         </div>
         <a
@@ -262,7 +262,7 @@ export function ChatPanel({ open, onClose, pendingAsk, onAskHandled }: ChatPanel
             ) : null}
             {message.demo ? (
               <p className="mt-1 text-[10px] italic text-charcoal/45">
-                Prepared response — live AI is unavailable right now.
+                Prepared response, live AI is unavailable right now.
               </p>
             ) : null}
           </div>

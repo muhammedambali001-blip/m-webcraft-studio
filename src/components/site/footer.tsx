@@ -127,7 +127,7 @@ export function Footer() {
             © {year} M-WebCraft Studio. All rights reserved.
           </p>
           <p className="text-xs text-ivory/55">
-            Website Designer &amp; AI Developer — Nigeria &amp; international
+            Website Designer &amp; AI Developer based in Nigeria, available worldwide
           </p>
         </div>
       </div>
