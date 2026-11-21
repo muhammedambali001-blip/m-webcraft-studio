@@ -16,7 +16,7 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
         {project.screenshot ? (
           <Image
             src={project.screenshot}
-            alt={`Website screenshot — ${project.title}`}
+            alt={`Website preview mockup — ${project.title}`}
             fill
             sizes="(min-width: 1024px) 33vw, 92vw"
             className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
